@@ -1,0 +1,34 @@
+common_params:
+  learning_rate:
+    type: float
+    min: 1.0e-4
+    max: 1.0e-2
+    log: true
+  weight_decay:
+    type: float
+    min: 1.0e-6
+    max: 1.0e-2
+    log: true
+  batch_size:
+    type: categorical
+    choices: [32, 64, 128, 256]
+  dropout:
+    type: float
+    min: 0.1
+    max: 0.5
+
+model_params:
+  d_model:
+    type: categorical
+    choices: [64, 128, 256, 512]
+  seg_len:
+    type: categorical
+    choices: [6, 12, 24]  # 주의: input_len과 pred_len이 seg_len으로 나누어 떨어져야 함
+  num_layers:
+    type: int
+    min: 1
+    max: 3
+
+# 학습 관련 설정
+patience: 15
+max_epochs: 50

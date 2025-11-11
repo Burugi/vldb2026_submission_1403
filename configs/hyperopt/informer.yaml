@@ -1,0 +1,54 @@
+common_params:
+  learning_rate:
+    type: float
+    min: 1.0e-4
+    max: 1.0e-2
+    log: true
+  weight_decay:
+    type: float
+    min: 1.0e-6
+    max: 1.0e-2
+    log: true
+  batch_size:
+    type: categorical
+    choices: [32, 64, 128, 256]
+  dropout:
+    type: float
+    min: 0.1
+    max: 0.5
+
+model_params:
+  d_model:
+    type: categorical
+    choices: [64, 128, 256, 512]
+  n_heads:
+    type: categorical
+    choices: [4, 8]
+  e_layers:
+    type: int
+    min: 1
+    max: 3
+  d_layers:
+    type: int
+    min: 1
+    max: 3
+  d_ff:
+    type: categorical
+    choices: [128, 256, 512, 1024]
+  factor:
+    type: int
+    min: 1
+    max: 5
+  label_len:
+    type: int
+    min: 0
+    max: 48
+  activation:
+    type: categorical
+    choices: ["relu", "gelu"]
+  distil:
+    type: categorical
+    choices: [true, false]
+
+patience: 10
+max_epochs: 50
