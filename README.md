@@ -167,7 +167,7 @@ python run_training.py \
 
 ## ⚙️ Hyperparameter Search Spaces
 
-# ✅ Hyperparameter Search Spaces (Summary)
+### ✅ Hyperparameter Search Spaces (Summary)
 
 ### **Common Hyperparameters**
 
@@ -180,7 +180,7 @@ python run_training.py \
 
 ---
 
-# ✅ Model-Specific Hyperparameters
+### ✅ Model-Specific Hyperparameters
 
 | Model           | Hyperparameters (Search Space)                                                                                                                                                                           |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
